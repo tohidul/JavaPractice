@@ -1,15 +1,15 @@
-import com.tohidul.OopPractice.AreaCalculator;
-import com.tohidul.OopPractice.AreaCalculatorTriangle;
+import com.tohidul.OopPractice.Author;
+import com.tohidul.OopPractice.Book;
 
 public class Main {
     public static void main(String[] args) {
-        AreaCalculator test_area = new AreaCalculator();
-        AreaCalculatorTriangle test_triangle_area = new AreaCalculatorTriangle();
+        Author author = new Author("Bazlur", "bazlur@gmail.com","Male");
+        Book book = new Book("java programming", author, 413, 1000);
 
-        System.out.println("Circle Area: "+test_area.getArea(3));
-        System.out.println("Rectangle Area: "+test_area.getArea(3,4));
-        System.out.println("Triangle Area: "+test_triangle_area.getArea(3,4));
-        System.out.println("Cylinder Area: "+test_area.getArea(3.0,4.0));
+        System.out.println("Name of the book: " + book.getName());
+        System.out.println("Name of the author: " + book.getAuthor());
+        System.out.println("Price of the book: " + book.getPrice());
+        System.out.println("Available in stocks: " + book.getNumber_of_unit());
 
 
     }
