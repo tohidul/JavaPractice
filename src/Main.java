@@ -1,14 +1,15 @@
-import com.tohidul.IOpractice.SimpleIO;
-import com.tohidul.IOpractice.FileExample;
-import java.io.IOException;
-import com.tohidul.IOpractice.CurrentWorkingDirectory;
-import com.tohidul.IOpractice.DirectoryExample;
+import com.tohidul.IOpractice.GetFileList;
 import com.tohidul.IOpractice.RenameExample;
+import java.io.IOException;
+
+import com.tohidul.IOpractice.DeleteFile;
 public class Main {
     public static void main(String[] args) throws IOException {
         //This is just for practice;
         // Will add more practice;
-        RenameExample.renameFile("E:\\documents\\fileCreatedFromAJavaProgram.txt", "E:\\documents\\fileRenamed.txt");
+       GetFileList myDir = new GetFileList("D:");
+
+       myDir.showFilesOnADirectory();
 
     }
 }
