@@ -1,6 +1,9 @@
 package com.tohidul.IOpractice;
 
 import java.io.File;
+import java.io.File;
+import java.io.FileFilter;
+
 
 public class FileCount {
     private String directoryPath;
@@ -19,7 +22,13 @@ public class FileCount {
 
     public int getTotalFileCount(){
         File dir = new File(directoryPath);
-        String[] fileList = dir.list();
+        FileFilter fileFilter = new FileFilter(){
+            @Override
+            public boolean accept(File pathname){
+                return  !pathname.isDirectory();
+            }
+        };
+        File[] fileList = dir.listFiles(fileFilter);
         return fileList.length;
     }
 }
